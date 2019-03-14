@@ -26,7 +26,16 @@ will-change: opacity;
 
 ##### 伪类实现图片三角形
 * 思路就是底部三角形容器背景色为底部相邻容器的背景颜色，左边div skewX后变成一个菱形，同理右边也是,调整位置即可
-* 里面左右div宽度都是80%，左div right 80%,
+* 箭头容器absolute,before及after伪类都是absolute 最点睛笔是bottom 100% 和background-color为inherit
+* 里面左右div宽度都是80%，左div right 80%  这个位置似乎我还没想明白是怎么算出来的
+
+###### 伪元素和平移（translate）变换实现的提示框
+* 正常情况下，容器是relative并且overflow为hidden，当hover的时候为visible
+* tooltip其实是一直存在，只是在正常情况下被hidden不显示罢了
+* tooltip为了有动画效果，在正常情况下opacity为0，只有hover的时候opacity才为1
+
+###### 伪元素构建的文章水印背景
+* 其实就是用的伪类的content再加上具体颜色，以及配合当前容器的背景色来实现的
 
 
 #####  index.html  伪元素实现类似word文档的目录
